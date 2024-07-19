@@ -1,3 +1,5 @@
 :: trime.bat
-adb push default /sdcard/rime
+adb push bak/. /sdcard/rime
+adb push rimerc/. /sdcard/rime
+adb push rime/. /sdcard/rime
 @REM adb shell am broadcast -a com.osfans.trime.deploy
