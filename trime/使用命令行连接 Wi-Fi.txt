@@ -1,3 +1,5 @@
+https://developer.android.com/tools/adb?hl=zh-cn#connect-to-a-device-over-wi-fi
+
 使用命令行连接 Wi-Fi
 另外，如果您想在不使用 Android Studio 的情况下，通过命令行连接到您的设备，请按以下步骤操作：
 
