@@ -4,50 +4,54 @@ ascii_mode: 1 #键盘的默认状态（0：中文；1：英文）
 height: 30   #每行高度
 width: 16.66   #按鍵默認寬度（取所有按鍵中用得較多的寬度值，接下來就可以少寫一些width了） 
 columns : 6  # 键盘最大列数，超过则自动换行，默认 30 列
+key_text_size: 10  #按键文本大小（click）
+label_text_size: 10
+symbol_text_size: 18  #符号大小（long_click 和 hint）
+key_hint_offset_y: -3 #助记符号 y 方向偏移量（向下为正，下同）
 keys:   #按鍵排列
   #第一行
-  - {label: "可", click: z, long_click: }
-  - {label: "都", click: q, long_click: }
-  - {label: "", click: "", long_click: }
-  - {label: "", click: "", long_click: }
-  - {label: "", click: "", long_click: }
-  - {label: "退格", click: "BackSpace", long_click: }
+  - {hint: "可", click: z}
+  - {hint: "都", click: q}
+  - {hint: "", click: ""}
+  - {hint: "", click: ""}
+  - {hint: "", click: ""}
+  - {hint: "", click: "BackSpace"}
 
   #第二行
-  - {label: "不", click: c, long_click: }
-  - {label: "来", click: a, long_click: }
-  - {label: "如", click: b, long_click: }
-  - {label: "到", click: y, long_click: }
-  - {label: "和", click: x, long_click: }
-  - {label: "行", click: p, long_click: }
+  - {hint: "不", click: c}
+  - {hint: "来", click: a}
+  - {hint: "如", click: b}
+  - {hint: "到", click: y}
+  - {hint: "和", click: x}
+  - {hint: "行", click: p}
 
   #第三行
-  - {label: "得", click: w, long_click: }
-  - {label: "也", click: e, long_click: }
-  - {label: "要", click: v, long_click: }
-  - {label: "的", click: u, long_click: }
-  - {label: "为", click: i, long_click: }
-  - {label: "是", click: o, long_click: }
+  - {hint: "得", click: w}
+  - {hint: "也", click: e}
+  - {hint: "要", click: v}
+  - {hint: "的", click: u}
+  - {hint: "为", click: i}
+  - {hint: "是", click: o}
 
   #第四行
-  - {label: "了", click: r, long_click: }
-  - {label: "中", click: d, long_click: }
-  - {label: "一", click: f, long_click: }
-  - {label: "人", click: j, long_click: }
-  - {label: "道", click: h, long_click: }
-  - {label: "能", click: k, long_click: }
+  - {hint: "了", click: r}
+  - {hint: "中", click: d}
+  - {hint: "一", click: f}
+  - {hint: "人", click: j}
+  - {hint: "道", click: h}
+  - {hint: "能", click: k}
 
   #第五行
-  - {label: "我", click: t, long_click: }
-  - {label: "就", click: g, long_click: }
-  - {label: "说", click: s, long_click: }
-  - {label: "在", click: n, long_click: }
-  - {label: "大", click: m, long_click: }
-  - {label: "而", click: l, long_click: }
+  - {hint: "我", click: t}
+  - {hint: "就", click: g}
+  - {hint: "说", click: s}
+  - {hint: "在", click: n}
+  - {hint: "大", click: m}
+  - {hint: "而", click: l}
 
   #第六行
-  - {click: Keyboard_symbols, label: "符号"}
-  - {click: Keyboard_qwerty, label: "En",key_text_size: "18"}
-  - {label: " " , click: space, long_click: VOICE_ASSIST, width: 33.33}
-  - {label: "123", click: Theme_settings}
-  - {label: "换行", click: Return}
+  - { hint: "符号", click: " ",}
+  - {hint: "En", click: " ",key_text_size: "18"}
+  - {hint: " " , click: space, width: 33.33}
+  - {hint: "", click: Theme_settings}
+  - {hint: "", click: Return}

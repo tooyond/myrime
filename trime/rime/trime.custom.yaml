@@ -1,5 +1,5 @@
 patch:
-  #1、新建一個按鍵佈局wubi86_double_key 
+  #1、新建一個按鍵佈局
   "preset_keyboards/default":  #佈局ID
     __include: trime.custom.hanhu_keyboard.yaml:/
  
@@ -10,15 +10,17 @@ patch:
     - symbols
     - qwerty
  
-  "preset_keyboards/qwerty/ascii_mode": 1
  
   "style/candidate_view_height": 36
   "style/round_corner": 0.0
-  "style/label_text_size": 18
-  "style/comment_height": 14
+  
+  "style/text_size": 10
+  "style/key_text_size": 2
+  "style/symbol_text_size": 18
+  "style/comment_height": 12
   "preset_keys/Keyboard_defaultw":   #返回中文键盘
       label: 英
-      select: .default
+      select: default
       send: Eisu_toggle
   "preset_keys/space":
     functional: false
