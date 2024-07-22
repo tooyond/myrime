@@ -1,0 +1,53 @@
+author: "tooyond"   #作者
+name: "虎码一简码"  #方便自己辨識的名字
+ascii_mode: 1 #键盘的默认状态（0：中文；1：英文）
+height: 30   #每行高度
+width: 16.66   #按鍵默認寬度（取所有按鍵中用得較多的寬度值，接下來就可以少寫一些width了） 
+columns : 6  # 键盘最大列数，超过则自动换行，默认 30 列
+keys:   #按鍵排列
+  #第一行
+  - {label: "可", click: z, long_click: }
+  - {label: "都", click: q, long_click: }
+  - {label: "", click: "", long_click: }
+  - {label: "", click: "", long_click: }
+  - {label: "", click: "", long_click: }
+  - {label: "退格", click: "BackSpace", long_click: }
+
+  #第二行
+  - {label: "不", click: c, long_click: }
+  - {label: "来", click: a, long_click: }
+  - {label: "如", click: b, long_click: }
+  - {label: "到", click: y, long_click: }
+  - {label: "和", click: x, long_click: }
+  - {label: "行", click: p, long_click: }
+
+  #第三行
+  - {label: "得", click: w, long_click: }
+  - {label: "也", click: e, long_click: }
+  - {label: "要", click: v, long_click: }
+  - {label: "的", click: u, long_click: }
+  - {label: "为", click: i, long_click: }
+  - {label: "是", click: o, long_click: }
+
+  #第四行
+  - {label: "了", click: r, long_click: }
+  - {label: "中", click: d, long_click: }
+  - {label: "一", click: f, long_click: }
+  - {label: "人", click: j, long_click: }
+  - {label: "道", click: h, long_click: }
+  - {label: "能", click: k, long_click: }
+
+  #第五行
+  - {label: "我", click: t, long_click: }
+  - {label: "就", click: g, long_click: }
+  - {label: "说", click: s, long_click: }
+  - {label: "在", click: n, long_click: }
+  - {label: "大", click: m, long_click: }
+  - {label: "而", click: l, long_click: }
+
+  #第六行
+  - {click: Keyboard_symbols, label: "符号"}
+  - {click: Keyboard_qwerty, label: "En",key_text_size: "18"}
+  - {label: " " , click: space, long_click: VOICE_ASSIST, width: 33.33}
+  - {label: "123", click: Theme_settings}
+  - {label: "换行", click: Return}
