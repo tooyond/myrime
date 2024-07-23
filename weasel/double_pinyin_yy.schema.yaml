@@ -54,10 +54,10 @@ engine:
 
 speller:
   # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射
-  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`;
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`;'
   # initials 定义仅作为始码的按键，排除 `; 让单个的 `; 可以直接上屏
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
-  delimiter: " '"  # 隔音符號用「'」；第一位的空白用來自動插入到音節邊界處
+  delimiter: " \""  # 隔音符號用「'」；第一位的空白用來自動插入到音節邊界處
   algebra:  # 拼寫運算規則，這個纔是實現雙拼方案的重點。寫法有很多種，當然也可以把四百多個音節碼一條一條地列舉
     - erase/^xx$/             # 碼表中有幾個拼音不明的字，編碼成xx了，消滅他
     - derive/^([jqxy])u$/$1v/
@@ -65,30 +65,30 @@ speller:
     - xform/^ch/A/
     - xform/^sh/E/
     - xform/^([aeu].*)$/O$1/  # 添上固定的零聲母o，先標記爲大寫
-    - xform/ei$/Q/            # 替換韻母鍵
+    - xform/ei$/C/            # 替換韻母鍵
     - xform/ian$/L/           # ※2
     - xform/er$/R/        # 對應兩種韻母的；音節er現在變爲OR了
     - xform/iu$/F/ 
     - xform/[iu]ang$/G/       # ※1
-    - xform/ing$/M/
+    - xform/ing$/D/
     - xform/uo$/O/
     - xform/uan$/Z/           # ※3
-    - xform/i?ong$/P/
+    - xform/i?ong$/k/
     - xform/ua$/X/
     - xform/ia$/A/
     - xform/en$/N/
-    - xform/eng$/R/
+    - xform/eng$/M/
     - xform/ang$/H/           # 檢查一下在此之前是否已轉換過了帶介音的ang；好，※1處有了
     - xform/an$/S/            # 如果※2、※3還無有出現在上文中，應該把他們提到本行之前
-    - xform/iao$/C/           # 對——像這樣讓iao提前出場
+    - xform/iao$/J/           # 對——像這樣讓iao提前出場
     - xform/ao$/T/
     - xform/in$/B/       
-    - xform/uai$/M/           # 讓uai提前出場
-    - xform/ai$/J/
+    - xform/uai$/'/           # 讓uai提前出場
+    - xform/ai$/P/
     - xform/ie$/;/
     - xform/ou$/Y/
-    - xform/un$/D/
-    - xform/ui$/K/
+    - xform/un$/Q/
+    - xform/ui$/R/
     - xform/[uv]e$/W/
     - xlit/QWERTYOPASDFGHJKLZXCVBNMU/qwertyopasdfghjklzxcvbnmu/  # 最後把雙拼碼全部變小寫
 
@@ -100,37 +100,38 @@ translator:
     - xform/o(\w)/0$1/        # 零聲母先改爲0，以方便後面的轉換
     - xform/([jqx])a/$1ia/
     - xform/(\w)n/$1en/
-    - xform/(\w)q/$1ei/       # 雙拼第二碼轉換爲韻母
-    - xform/(\w)d/$1un/       # 提前轉換雙拼碼 n 和 g，因爲轉換後的拼音裏就快要出現這兩個字母了，那時將難以分辨出雙拼碼
+    - xform/(\w)c/$1ei/       # 雙拼第二碼轉換爲韻母
+    - xform/(\w)q/$1un/       # 提前轉換雙拼碼 n 和 g，因爲轉換後的拼音裏就快要出現這兩個字母了，那時將難以分辨出雙拼碼
     # - xform/(\w)r/$1eng/      # 當然也可以採取事先將雙拼碼變爲大寫的辦法來與轉換過的拼音做區分，可誰讓我是高手呢
     - xform/(\w)l/$1ian/
     - xform/([dtnljqx])f/$1iu/  # 對應多種韻母的雙拼碼，按搭配的聲母做區分（最好別用排除式如 [^o]r 容易出狀況）
     - xform/0r/0er/             # 另一種情況，注意先不消除0，以防後面把e當作聲母轉換爲ch
     - xform/([nljqx])g/$1iang/ 
-    - xform/([ybpmdtnljqx])m/$1ing/
+    - xform/([ybpmdtnljqx])d/$1ing/
     - xform/([dtnlgkhaevrzcs])o/$1uo/
     - xform/(\w)z/$1uan/
-    - xform/([jqx])p/$1iong/
-    - xform/(\w)p/$1ong/
+    - xform/([jqx])k/$1iong/
+    - xform/(\w)k/$1ong/
     - xform/([bdjlmnpqtx])x/$1ie/
     - xform/([gkhaevrzcs])x/$1ua/
     - xform/(\w)h/$1ang/
     - xform/(\w)s/$1an/
     - xform/(\w)t/$1ao/       # 默默檢查：雙拼碼 o 已經轉換過了
-    - xform/(\w)j/$1ai/
-    - xform/(\w)c/$1iao/
+    - xform/(\w)p/$1ai/
+    - xform/(\w)j/$1iao/
     - xform/(\w);/$1ie/
     - xform/(\w)b/$1in/
     - xform/(\w)y/$1ou/
     - xform/([nl])w/$1ve/
     - xform/([jqxy])w/$1ue/
-    - xform/(\w)k/$1ui/
-    - "xform/(^|[ '])u/$1zh/"  # 復原聲母，音節開始處的雙拼字母a改寫爲zh；其他位置的才真正是a
-    - "xform/(^|[ '])a/$1ch/"
-    - "xform/(^|[ '])e/$1sh/"
-    - xform/([gkh])m/$1uai/
+    - xform/([^e ])r/$1ui/
+    - "xform/(^|[ \"])u/$1zh/"  # 復原聲母，音節開始處的雙拼字母a改寫爲zh；其他位置的才真正是a
+    - "xform/(^|[ \"])a/$1ch/"
+    - "xform/(^|[ \"])e/$1sh/"
+    - xform/(\w)'/$1uai/
+    # - xform/([gkh])'/$1uai/
     - xform/([ghk])g/$1uang/ 
-    - xform/([^e ])r/$1eng/
+    - xform/(\w)m/$1eng/
     - xform/0(\w)/$1/          # 好了，現在可以把零聲母拿掉啦
     # - xform/([nljqxy])v/$1ü/   # 這樣纔是漢語拼音 :-)
 
