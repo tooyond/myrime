@@ -50,8 +50,7 @@ keys:   #按鍵排列
   - {hint: "而", click: l}
 
   #第六行
-  - { hint: "符号", click: " ",}
-  - {hint: "En", click: " ",key_text_size: "18"}
-  - {hint: " " , click: space, width: 33.33}
+  - {hint: "", click: IME_last,width: "33.33"}
+  - {hint: "" , click: space, width: 33.33}
   - {hint: "", click: Theme_settings}
   - {hint: "", click: Return}

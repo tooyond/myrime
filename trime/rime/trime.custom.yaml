@@ -27,3 +27,8 @@ patch:
     label: " "
     repeatable: false  #关掉空格键重复
     send: space
+  "preset_keys/IME_last":
+    functional: false
+    label: "輸入法"
+    send: LANGUAGE_SWITCH
+    select: .last
