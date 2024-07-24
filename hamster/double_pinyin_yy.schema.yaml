@@ -4,7 +4,7 @@
 schema:
   schema_id: double_pinyin_yy
   name: 阳的双拼
-  version: "0.240716"
+  version: "0.240724"
   author:
     - yy
   description: |
