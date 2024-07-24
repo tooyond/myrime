@@ -16,11 +16,11 @@
   function transform(s) {
     switch (s) {
       case 'q': return 's..'
-      case 'w': return 'v..'
-      case 'e': return 'w..'
+      case 'w': return 'y..'
+      case 'e': return 'f..'
       case 'r': return 'p..'
-      case 't': return 'y..'
-      case 'y': return 'f..'
+      case 't': return 'w..'
+      case 'y': return 'v..'
       case 'u': return 'g..'
       case 'i': return 'c..'
       case 'o': return 'r..'

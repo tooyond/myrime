@@ -1051,7 +1051,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: \
+                    char: ""
                 label:
                   text: ""
                 display: true
@@ -1059,14 +1059,13 @@ keyboards:
                 direction: up
           - action:
               character:
-                char: ","
+                char: w
             width: available
-            label:
-              text: ""
+            label: 得
             swipe:
               - action:
                   character:
-                    char: "}"
+                    char: w
                 label:
                   text: ""
                 display: true
@@ -1074,14 +1073,13 @@ keyboards:
                 direction: up
           - action:
               character:
-                char: .
+                char: e
             width: available
-            label:
-              text: ""
+            label: 也
             swipe:
               - action:
                   character:
-                    char: "]"
+                    char: e
                 label:
                   text: ""
                 display: true
@@ -1103,13 +1101,14 @@ keyboards:
                 direction: up
           - action:
               character:
-                char: t
+                char: ","
             width: available
-            label: 我
+            label:
+              text: ""
             swipe:
               - action:
                   character:
-                    char: t
+                    char: ""
                 label:
                   text: ""
                 display: true
@@ -1117,13 +1116,14 @@ keyboards:
                 direction: up
           - action:
               character:
-                char: y
+                char: .
             width: available
-            label: 到
+            label:
+              text: ""
             swipe:
               - action:
                   character:
-                    char: y
+                    char: ""
                 label:
                   text: ""
                 display: true
@@ -1419,13 +1419,13 @@ keyboards:
                 direction: up
           - action:
               character:
-                char: e
+                char: t
             width: available
-            label: 也
+            label: 我
             swipe:
               - action:
                   character:
-                    char: e
+                    char: t
                 label:
                   text: ""
                 display: true
@@ -1433,13 +1433,13 @@ keyboards:
                 direction: up
           - action:
               character:
-                char: w
+                char: y
             width: available
-            label: 得
+            label: 到
             swipe:
               - action:
                   character:
-                    char: w
+                    char: y
                 label:
                   text: ""
                 display: true
@@ -2597,7 +2597,7 @@ keyboards:
       bottom: 6
       top: 6
       right: 4
-  - name: Dvorak-tooyond_tip2
+  - name: Dt_tip
     isPrimary: true
     rows:
       - keys:
@@ -2648,7 +2648,7 @@ keyboards:
       - keys:
           - action:
               character:
-                char: B
+                char: ‘
             width:
               portrait:
                 percentage: 0.1
@@ -2658,7 +2658,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: in
+                    char: uai
                 label:
                   text: ""
                 display: true
@@ -2938,14 +2938,17 @@ keyboards:
       - keys:
           - action:
               character:
-                char: X
-            width: available
+                char: ;
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
             label:
               text: ""
             swipe:
               - action:
                   character:
-                    char: ua
+                    char: ie
                 label:
                   text: ""
                 display: true
@@ -2998,17 +3001,14 @@ keyboards:
                 direction: up
           - action:
               character:
-                char: ;
-            width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+                char: X
+            width: available
             label:
               text: ""
             swipe:
               - action:
                   character:
-                    char: ie
+                    char: ua
                 label:
                   text: ""
                 display: true
@@ -3016,14 +3016,14 @@ keyboards:
                 direction: up
           - action:
               character:
-                char: ’
+                char: B
             width: available
             label:
               text: ""
             swipe:
               - action:
                   character:
-                    char: uai
+                    char: in
                 label:
                   text: ""
                 display: true
