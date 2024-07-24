@@ -54,10 +54,10 @@ engine:
 
 speller:
   # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射
-  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`;
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`;'
   # initials 定义仅作为始码的按键，排除 `; 让单个的 `; 可以直接上屏
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
-  delimiter: " '"  # 隔音符號用「'」；第一位的空白用來自動插入到音節邊界處
+  delimiter: " \""  # 隔音符號用「'」；第一位的空白用來自動插入到音節邊界處
   algebra:  # 拼寫運算規則，這個纔是實現雙拼方案的重點。寫法有很多種，當然也可以把四百多個音節碼一條一條地列舉
     - erase/^xx$/             # 碼表中有幾個拼音不明的字，編碼成xx了，消滅他
     - derive/^([jqxy])u$/$1v/
@@ -83,7 +83,7 @@ speller:
     - xform/iao$/C/           # 對——像這樣讓iao提前出場
     - xform/ao$/T/
     - xform/in$/B/       
-    - xform/uai$/M/           # 讓uai提前出場
+    - xform/uai$/'/           # 讓uai提前出場
     - xform/ai$/J/
     - xform/ie$/;/
     - xform/ou$/Y/
@@ -125,10 +125,10 @@ translator:
     - xform/([nl])w/$1ve/
     - xform/([jqxy])w/$1ue/
     - xform/(\w)k/$1ui/
-    - "xform/(^|[ '])u/$1zh/"  # 復原聲母，音節開始處的雙拼字母a改寫爲zh；其他位置的才真正是a
-    - "xform/(^|[ '])a/$1ch/"
-    - "xform/(^|[ '])e/$1sh/"
-    - xform/([gkh])m/$1uai/
+    - "xform/(^|[ \"])u/$1zh/"  # 復原聲母，音節開始處的雙拼字母a改寫爲zh；其他位置的才真正是a
+    - "xform/(^|[ \"])a/$1ch/"
+    - "xform/(^|[ \"])e/$1sh/"
+    - xform/([gkh])'/$1uai/
     - xform/([ghk])g/$1uang/ 
     - xform/([^e ])r/$1eng/
     - xform/0(\w)/$1/          # 好了，現在可以把零聲母拿掉啦
