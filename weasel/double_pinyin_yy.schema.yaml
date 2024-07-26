@@ -64,7 +64,7 @@ speller:
     - xform/^zh/U/            # 替換聲母鍵，用大寫以防與原有的字母混淆
     - xform/^ch/A/
     - xform/^sh/E/
-    - xform/^([aeu].*)$/O$1/  # 添上固定的零聲母o，先標記爲大寫
+    - xform/^([aeuo].*)$/O$1/  # 添上固定的零聲母o，先標記爲大寫
     - xform/ei$/Q/            # 替換韻母鍵
     - xform/ian$/L/           # ※2
     - xform/er$/R/        # 對應兩種韻母的；音節er現在變爲OR了

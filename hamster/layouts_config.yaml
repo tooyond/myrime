@@ -1,33 +1,32 @@
-keyboard:
-  colorSchemas:
-    - schemaName: schema
-      name: 配色方案
-      author: 佚名
-      back_color: "0xFFFFFF"
-      button_back_color: "0xFFFFFF"
-      button_pressed_back_color: "0xD0D0D0"
-      button_bubble_back_color: "0xD0D0D0"
-      button_foreground_color: "0x0D0D0D"
-      button_pressed_foreground_color: "0x000000"
-      button_swipe_foreground_color: "0x000000"
-      button_swipe_pressed_foreground_color: "0x000000"
-      corner_radius: 7
-      border_color: "0x000000"
-      border_size: 1
-      text_color: "0x000000"
-      lower_edge_color: "0x000000"
-      shadow_color: "0x000000"
-      shadow_size: 0
-      hilited_candidate_back_color: "0xFFFFFF"
-      hilited_candidate_text_color: "0x000000"
-      hilited_candidate_label_color: "0x000000"
-      hilited_comment_text_color: "0x000000"
-      candidate_text_color: "0x000000"
-      comment_text_color: "0x000000"
-      label_color: "0x000000"
-      hilited_callout_back_color: "0xFFFFFF"
-      hilited_callout_foreground_color: "0x000000"
-      action_callout_back_color: "0xD0D0D0"
+colorSchemas:
+  - schemaName: schema
+    name: 配色方案
+    author: 佚名
+    back_color: "0xFFFFFF"
+    button_back_color: "0xFFFFFF"
+    button_pressed_back_color: "0xD0D0D0"
+    button_bubble_back_color: "0xD0D0D0"
+    button_foreground_color: "0x0D0D0D"
+    button_pressed_foreground_color: "0x000000"
+    button_swipe_foreground_color: "0x000000"
+    button_swipe_pressed_foreground_color: "0x000000"
+    corner_radius: 7
+    border_color: "0x000000"
+    border_size: 1
+    text_color: "0x000000"
+    lower_edge_color: "0x000000"
+    shadow_color: "0x000000"
+    shadow_size: 0
+    hilited_candidate_back_color: "0xFFFFFF"
+    hilited_candidate_text_color: "0x000000"
+    hilited_candidate_label_color: "0x000000"
+    hilited_comment_text_color: "0x000000"
+    candidate_text_color: "0x000000"
+    comment_text_color: "0x000000"
+    label_color: "0x000000"
+    hilited_callout_back_color: "0xFFFFFF"
+    hilited_callout_foreground_color: "0x000000"
+    action_callout_back_color: "0xD0D0D0"
 keyStyle:
   h1:
     name: h1
@@ -52,37 +51,37 @@ keyboards:
       - keys:
           - action:
               symbol:
-                char: ""
+                char: "!"
             width: available
             label:
               text: ""
           - action:
               character:
-                char: c
+                char: "?"
             width: available
             label:
               text: ""
           - action:
               character:
-                char: c
+                char: 「
             width: available
             label:
               text: ""
           - action:
               character:
-                char: c
+                char: 」
             width: available
             label:
               text: ""
           - action:
               character:
-                char: c
+                char: (
             width: available
             label:
               text: ""
           - action:
               character:
-                char: c
+                char: )
             width: available
             label:
               text: ""
@@ -118,7 +117,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: w
+                    char: y
                 label:
                   text: ""
                 display: true
@@ -132,7 +131,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: e
+                    char: f
                 label:
                   text: ""
                 display: true
@@ -146,7 +145,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: r
+                    char: p
                 label:
                   text: ""
                 display: true
@@ -190,7 +189,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: u
+                    char: g
                 label:
                   text: ""
                 display: true
@@ -204,7 +203,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: i
+                    char: c
                 label:
                   text: ""
                 display: true
@@ -218,7 +217,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: o
+                    char: r
                 label:
                   text: ""
                 display: true
@@ -232,7 +231,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: p
+                    char: l
                 label:
                   text: ""
                 display: true
@@ -261,7 +260,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: s
+                    char: o
                 label:
                   text: ""
                 display: true
@@ -275,7 +274,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: d
+                    char: e
                 label:
                   text: ""
                 display: true
@@ -289,7 +288,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: f
+                    char: u
                 label:
                   text: ""
                 display: true
@@ -303,7 +302,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: g
+                    char: i
                 label:
                   text: ""
                 display: true
@@ -317,7 +316,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: h
+                    char: d
                 label:
                   text: ""
                 display: true
@@ -331,7 +330,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: j
+                    char: h
                 label:
                   text: ""
                 display: true
@@ -345,7 +344,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: k
+                    char: t
                 label:
                   text: ""
                 display: true
@@ -359,7 +358,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: l
+                    char: n
                 label:
                   text: ""
                 display: true
@@ -373,7 +372,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: q
+                    char: s
                 label:
                   text: ""
                 display: true
@@ -394,7 +393,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: x
+                    char: q
                 label:
                   text: ""
                 display: true
@@ -408,7 +407,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: c
+                    char: j
                 label:
                   text: ""
                 display: true
@@ -422,7 +421,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: v
+                    char: k
                 label:
                   text: ""
                 display: true
@@ -436,7 +435,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: b
+                    char: x
                 label:
                   text: ""
                 display: true
@@ -450,7 +449,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: n
+                    char: b
                 label:
                   text: ""
                 display: true
@@ -478,7 +477,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: t
+                    char: w
                 label:
                   text: ""
                 display: true
@@ -492,7 +491,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: y
+                    char: v
                 label:
                   text: ""
                 display: true
@@ -611,7 +610,7 @@ keyboards:
       - keys:
           - action:
               character:
-                char: ‘
+                char: "`"
             width:
               portrait:
                 percentage: 0.1
@@ -832,7 +831,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: ing
+                    char: un
                 label:
                   text: ""
                 display: true

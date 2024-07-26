@@ -54,7 +54,7 @@ engine:
 
 speller:
   # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射
-  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`;'
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`;
   # initials 定义仅作为始码的按键，排除 `; 让单个的 `; 可以直接上屏
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
   delimiter: " \""  # 隔音符號用「'」；第一位的空白用來自動插入到音節邊界處
@@ -64,7 +64,7 @@ speller:
     - xform/^zh/U/            # 替換聲母鍵，用大寫以防與原有的字母混淆
     - xform/^ch/A/
     - xform/^sh/E/
-    - xform/^([aeu].*)$/O$1/  # 添上固定的零聲母o，先標記爲大寫
+    - xform/^([aeuo].*)$/O$1/  # 添上固定的零聲母o，先標記爲大寫
     - xform/ei$/Q/            # 替換韻母鍵
     - xform/ian$/L/           # ※2
     - xform/er$/R/        # 對應兩種韻母的；音節er現在變爲OR了
@@ -83,7 +83,7 @@ speller:
     - xform/iao$/C/           # 對——像這樣讓iao提前出場
     - xform/ao$/T/
     - xform/in$/B/       
-    - xform/uai$/'/           # 讓uai提前出場
+    - xform/uai$/`/           # 讓uai提前出場
     - xform/ai$/J/
     - xform/ie$/;/
     - xform/ou$/Y/
@@ -128,7 +128,7 @@ translator:
     - "xform/(^|[ \"])u/$1zh/"  # 復原聲母，音節開始處的雙拼字母a改寫爲zh；其他位置的才真正是a
     - "xform/(^|[ \"])a/$1ch/"
     - "xform/(^|[ \"])e/$1sh/"
-    - xform/([gkh])'/$1uai/
+    - xform/([gkh])`/$1uai/
     - xform/([ghk])g/$1uang/ 
     - xform/([^e ])r/$1eng/
     - xform/0(\w)/$1/          # 好了，現在可以把零聲母拿掉啦
