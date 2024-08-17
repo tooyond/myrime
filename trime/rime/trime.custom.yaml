@@ -1,7 +1,7 @@
 patch:
   #1、新建一個按鍵佈局
   "preset_keyboards/default":  #佈局ID
-    __include: trime.custom.hanhu_keyboard.yaml:/
+    __include: trime.custom.hu_abcdefg_keyboard.yaml:/
  
   "style/keyboards":
     - .default

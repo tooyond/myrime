@@ -1,0 +1,56 @@
+author: "tooyond"   #作者
+name: "虎码一简码"  #方便自己辨識的名字
+ascii_mode: 1 #键盘的默认状态（0：中文；1：英文）
+height: 30   #每行高度
+width: 16.66   #按鍵默認寬度（取所有按鍵中用得較多的寬度值，接下來就可以少寫一些width了） 
+columns : 6  # 键盘最大列数，超过则自动换行，默认 30 列
+key_text_size: 10  #按键文本大小（click）
+label_text_size: 10
+symbol_text_size: 18  #符号大小（long_click 和 hint）
+key_hint_offset_y: -3 #助记符号 y 方向偏移量（向下为正，下同）
+keys:   #按鍵排列
+  #第一行
+  - {hint: "，", click: ","}
+  - {hint: "。", click: "."}
+  - {hint: "？", click: "?"}
+  - {hint: "", click: Theme_settings}
+  - {hint: "", click: IME_last}
+  - {hint: "", click: "BackSpace"}
+  #第一行
+  - {hint: "A", click: a}
+  - {hint: "B", click: b}
+  - {hint: "C", click: c}
+  - {hint: "H", click: h}
+  - {hint: "I", click: i}
+  - {hint: "J", click: j}
+
+  #第二行
+  - {hint: "D", click: d}
+  - {hint: "E", click: e}
+  - {hint: "F", click: f}
+  - {hint: "K", click: k}
+  - {hint: "L", click: l}
+  - {hint: "M", click: m}
+
+  #第三行
+  - {hint: "G", click: g}
+  - {hint: "W", click: w}
+  - {hint: "V", click: v}
+  - {hint: "U", click: u}
+  - {hint: "Y", click: y}
+  - {hint: "N", click: n}
+
+  #第四行
+  - {hint: "T", click: t}
+  - {hint: "S", click: s}
+  - {hint: "R", click: r}
+  - {hint: "Q", click: q}
+  - {hint: "P", click: p}
+  - {hint: "O", click: o}
+
+  #第五行
+  - {hint: "Z", click: z}
+  - {hint: "X", click: x}
+  - {hint: "空格" , click: space, width: 33.33}
+  - {hint: "", click: "Keyboard_number"}
+  - {hint: "", click: Return}
